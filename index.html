@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AviationBlogs.co</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #f0f0f5; color: #333; text-align: center; }
+        header { background: white; padding: 20px 0; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); position: sticky; top: 0; width: 100%; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; }
+        nav ul li { display: inline; }
+        nav ul li a { text-decoration: none; font-size: 18px; padding: 10px 15px; background: #0073e6; color: white; border-radius: 5px; }
+        section { display: none; padding: 50px 20px; }
+        .active { display: block; }
+        .hero { text-align: center; padding: 80px 20px; background: #fff; }
+        .post img { width: 100%; max-width: 600px; height: auto; border-radius: 10px; }
+        footer { background: #333; color: white; padding: 20px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AviationBlogs.co</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('blog')">Blog</a></li>
+            <li><a href="#" onclick="showPage('about')">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="active">
+    <h2>Welcome to AviationBlogs.co</h2>
+    <p>Your #1 source for aviation news, history, and technology.</p>
+</section>
+
+<section id="blog">
+    <h2>Latest Articles</h2>
+    <div class="post">
+        <img src="images/concorde.jpg" alt="Concorde">
+        <h3>The Concorde: A Supersonic Legacy</h3>
+        <p>The Concorde was a marvel of engineering, setting speed records...</p>
+    </div>
+    <div class="post">
+        <img src="images/electric-aircraft.jpg" alt="Electric Aircraft">
+        <h3>The Future of Electric Aircraft</h3>
+        <p>Electric planes are revolutionizing the industry...</p>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About AviationBlogs.co</h2>
+    <p>We are passionate about aviation and love to share insights, stories, and the latest news in the aviation world.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 AviationBlogs.co. All rights reserved.</p>
+</footer>
+
+<script>
+    function showPage(pageId) {
+        document.querySelectorAll("section").forEach(section => {
+            section.classList.remove("active");
+        });
+        document.getElementById(pageId).classList.add("active");
+    }
+</script>
+
+</body>
+</html>
